@@ -58,7 +58,7 @@ const Dashboard: React.FC<DashboardProps> = ({ user, logout }) => {
   const generatePdf = async () => {
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([600, 750]);
-    const { width, height } = page.getSize();
+    const { height } = page.getSize();
 
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
     const fontSizeTitle = 24;
