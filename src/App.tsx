@@ -20,7 +20,7 @@ function App() {
           className="px-4 py-2 bg-blue-600 text-white rounded"
           onClick={login}
         >
-          使用 Google 登入
+          Sign in with Google
         </button>
       </div>
     );

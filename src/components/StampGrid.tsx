@@ -47,7 +47,7 @@ const StampGrid: React.FC<StampGridProps> = ({ stamps, maxStamps, onStampAdd }) 
                 ${stamped ? "bg-green-500 text-white cursor-default" : "bg-gray-200 hover:bg-gray-300"}`}
               onClick={() => handleClick(index)}
               disabled={stamped}
-              title={stamped ? "已蓋章" : `第 ${index} 個章位`}
+              title={stamped ? "Stamped" : `${index}-th stamp`}
             >
               {index}
             </button>

@@ -13,7 +13,9 @@
   },
   "homepage": "https://a920604a.github.io/resign-stamp",
   "dependencies": {
+    "@ramonak/react-progress-bar": "^5.4.0",
     "firebase": "^11.8.1",
+    "pdf-lib": "^1.17.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },

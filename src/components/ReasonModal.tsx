@@ -1,4 +1,3 @@
-// src/components/ReasonModal.tsx
 import React, { useState } from "react";
 
 interface ReasonModalProps {
@@ -21,13 +20,13 @@ const ReasonModal: React.FC<ReasonModalProps> = ({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded shadow-lg w-96">
-        <h2 className="text-xl mb-4">請輸入理由</h2>
+        <h2 className="text-xl mb-4">Please enter a reason</h2>
         <textarea
           rows={4}
           className="w-full border rounded p-2 mb-4"
           value={reason}
           onChange={(e) => setReason(e.target.value)}
-          placeholder="請輸入蓋章理由"
+          placeholder="Enter the reason for the stamp"
         />
         <div className="flex justify-end space-x-3">
           <button
@@ -37,7 +36,7 @@ const ReasonModal: React.FC<ReasonModalProps> = ({
               onClose();
             }}
           >
-            取消
+            Cancel
           </button>
           <button
             className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
@@ -47,7 +46,7 @@ const ReasonModal: React.FC<ReasonModalProps> = ({
               setReason("");
             }}
           >
-            蓋章
+            Stamp
           </button>
         </div>
       </div>
