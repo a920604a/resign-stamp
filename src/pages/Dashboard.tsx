@@ -3,14 +3,15 @@ import React, { useEffect, useState } from "react";
 import type { User } from "firebase/auth";
 import { db } from "../utils/firebase";
 import {
-  collection,
   doc,
   getDoc,
   setDoc,
   updateDoc,
   arrayUnion,
 } from "firebase/firestore";
-import StampGrid, { Stamp } from "../components/StampGrid";
+import StampGrid from "../components/StampGrid";
+import type { Stamp } from "../components/StampGrid";
+
 
 interface DashboardProps {
   user: User;
