@@ -1,7 +1,8 @@
 // src/App.tsx
 import { useEffect, useState } from "react";
 import { auth, login, logout } from "./utils/firebase";
-import { onAuthStateChanged, User } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
+import type { User } from "firebase/auth";     // 改成 import type
 import Dashboard from "./pages/Dashboard";
 
 function App() {

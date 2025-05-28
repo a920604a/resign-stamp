@@ -1,6 +1,6 @@
 // src/pages/Dashboard.tsx
 import React, { useEffect, useState } from "react";
-import { User } from "firebase/auth";
+import type { User } from "firebase/auth";
 import { db } from "../utils/firebase";
 import {
   collection,
