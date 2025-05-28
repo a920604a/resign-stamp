@@ -30,6 +30,10 @@ const StampGrid: React.FC<StampGridProps> = ({ stamps, maxStamps, onStampAdd }) 
     if (activeIndex !== null) {
       onStampAdd(activeIndex, reason);
     }
+    const audioUrl = import.meta.env.BASE_URL + "audio/stamp.mp3";
+    const audio = new Audio(audioUrl);
+    audio.play();
+    
     setModalOpen(false);
     setActiveIndex(null);
   };

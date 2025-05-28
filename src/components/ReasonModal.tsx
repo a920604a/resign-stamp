@@ -20,13 +20,13 @@ const ReasonModal: React.FC<ReasonModalProps> = ({
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded shadow-lg w-96">
-        <h2 className="text-xl mb-4">Please enter a reason</h2>
+        <h2 className="text-xl mb-4">請輸入理由</h2>
         <textarea
           rows={4}
           className="w-full border rounded p-2 mb-4"
           value={reason}
           onChange={(e) => setReason(e.target.value)}
-          placeholder="Enter the reason for the stamp"
+          placeholder="輸入蓋章原因或備註..."
         />
         <div className="flex justify-end space-x-3">
           <button
