@@ -42,7 +42,7 @@ const Reasons: React.FC<ReasonsProps> = ({ user }) => {
 
   const copyAllReasons = () => {
     const text = filteredStamps
-      .map((s, i) => `第 ${s.index } 章 - ${formatDate(s.timestamp)}\n${s.reason}\n`)
+      .map((s) => `第 ${s.index } 章 - ${formatDate(s.timestamp)}\n${s.reason}\n`)
       .join("\n");
     navigator.clipboard.writeText(text);
     alert("已複製所有理由！");
@@ -50,7 +50,7 @@ const Reasons: React.FC<ReasonsProps> = ({ user }) => {
 
   const downloadTxtFile = () => {
     const text = filteredStamps
-      .map((s, i) => `第 ${s.index } 章 - ${formatDate(s.timestamp)}\n${s.reason}\n`)
+      .map((s) => `第 ${s.index } 章 - ${formatDate(s.timestamp)}\n${s.reason}\n`)
       .join("\n");
     const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
     const link = document.createElement("a");
