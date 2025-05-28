@@ -1,9 +1,11 @@
 // src/App.tsx
 import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { auth, login, logout } from "./utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
-import type { User } from "firebase/auth";     // 改成 import type
+import type { User } from "firebase/auth";
 import Dashboard from "./pages/Dashboard";
+import Reasons from "./pages/Reasons";  // 新增理由列表頁
 
 function App() {
   const [user, setUser] = useState<User | null>(null);
@@ -20,13 +22,21 @@ function App() {
           className="px-4 py-2 bg-blue-600 text-white rounded"
           onClick={login}
         >
-          Sign in with Google
+          使用 Google 登入
         </button>
       </div>
     );
   }
 
-  return <Dashboard user={user} logout={logout} />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard user={user} logout={logout} />} />
+        <Route path="/reasons" element={<Reasons user={user} />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

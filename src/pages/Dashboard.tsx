@@ -1,5 +1,7 @@
 // src/pages/Dashboard.tsx
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import type { User } from "firebase/auth";
 import { db } from "../utils/firebase";
 import { doc, getDoc, setDoc, updateDoc, arrayUnion } from "firebase/firestore";
@@ -180,6 +182,12 @@ const Dashboard: React.FC<DashboardProps> = ({ user, logout }) => {
       <section className="border border-gray-300 rounded-lg p-6 shadow-sm bg-gray-50">
         <StampGrid stamps={stamps} maxStamps={MAX_STAMPS} onStampAdd={handleAddStamp} />
       </section>
+      <Link
+  to="/reasons"
+  className="text-blue-600 underline hover:text-blue-800 transition"
+>
+  查看所有理由列表 →
+</Link>
     </div>
   );
 };
