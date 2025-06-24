@@ -31,7 +31,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Dashboard user={user} logout={logout} />} />
+        {/* <Route path="/" element={<Dashboard user={user} logout={logout} />} /> */}
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        {/* Dashboard 路由 */}
+        <Route path="/dashboard" element={<Dashboard user={user} logout={logout} />} />
+
         <Route path="/reasons" element={<Reasons user={user} />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
